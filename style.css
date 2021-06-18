@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Fredoka One', cursive;
+    background-color: #0A1931;
+    color: #FFC947;
+}
+
+.container {
+    text-align: center;
+    
+
+}
+
+h2 {
+    margin: 21px;
+    
+}
+
+button {
+    color: #FEDDBE;
+    width: 50px;
+    border-style: solid;
+    font-family: 'Fredoka One', cursive;
+    border-radius: 25%;
+    border-color: black;
+    background-color: #185ADB;
+}
+
+button:hover{
+    background-color: #DBE6FD;
+}
+
+
+button:active {
+    background-color: #47597E;
+}
+
+
+.equals {
+    width: 157px;
+}
+
+.operators {
+    width: 36px;
+}
