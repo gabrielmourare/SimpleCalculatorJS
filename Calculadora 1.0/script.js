@@ -1,4 +1,5 @@
 let screen = document.getElementById('screen');
+let screen2 = document.getElementById('screen2');
 let buttons = document.querySelectorAll('[id^=button');
 let operators = document.querySelectorAll('[id^=operator]');
 let equal = document.getElementById('calculate=');
@@ -7,14 +8,10 @@ let newNumber = true;
 let previousNumber = 0;
 let currentOperator = null;
 
-//animations
-
-
-
 
 // screen starting state
 screen.textContent = 0;
-
+screen2.textContent = '0';
 
 // buttons treatment (AC, Equals, Digits and Operators)
 clearAll.addEventListener('click', function () {
@@ -23,6 +20,7 @@ clearAll.addEventListener('click', function () {
 
 
 equal.addEventListener('click', function () {
+    screen2.textContent = '='
     calculate();
 });
 
@@ -71,6 +69,8 @@ function selectOperator (o) {
         newNumber = true;
         currentOperator = o;
         previousNumber = parseFloat(screen.textContent);
+        screen2.textContent = previousNumber.toString() + o
+
         console.log(currentOperator);
         console.log(previousNumber)
     }
@@ -113,6 +113,7 @@ function clearDisplay() {
     currentOperator = null;
     newNumber = true;
     screen.textContent = 0;
+    screen2.textContent = '0';
 }
 
 
